@@ -1,0 +1,693 @@
+//|   .      .        _____  .    .    _   ____   .   .      . ____   __        
+//|   |\    /|    /\    |    |    |   /   /    \  |    \    / |      |  \     
+//|   | \  / |   /__\   |    |----|   \   |    |  |     \  /  |----  |__/    
+//|   |  \/  |  /    \  |    |    |   /    \__/   |___   \/   |____  |  \      
+//|   ________________________________________________________________________
+
+//|   By: Nathan Patrick
+
+#include <iostream>
+using namespace std;
+
+
+// SHAPES
+
+// Square Function
+    void square() {
+        cout << " -------- \n";
+        cout << "|        |\n";
+        cout << "|        | a\n";
+        cout << "|        |\n";
+        cout << " -------- \n\n";
+    }
+
+    // Cube Function
+    void cube() {
+        cout << "   ________     \n";
+        cout << "  /       /|    \n";
+        cout << " --------  |    \n";
+        cout << "|        | |    \n";
+        cout << "|        | |     \n";
+        cout << "|        |/      \n";
+        cout << " --------        \n";
+        cout << "     a           \n";
+    }
+
+    // 1st Rectangle Function
+    void rectanglea() {
+        cout << " -------------- \n";
+        cout << "|              |\n";
+        cout << "|              | a\n";
+        cout << "|              |\n";
+        cout << " -------------- \n";
+    }
+
+    // 2nd Rectangle Function
+    void rectangleb() {
+        cout << " -------------- \n";
+        cout << "|              |\n";
+        cout << "|              |\n";
+        cout << "|              |\n";
+        cout << " -------------- \n";
+        cout << "        b        \n\n";
+    }
+
+    // Triangle Function
+    void triangle() {
+
+        cout << "       /|    \n";
+        cout << "      / |    \n";
+        cout << "     /  |    \n";
+        cout << "  c /   | b  \n";
+        cout << "   /    |    \n";
+        cout << "  /     |    \n";
+        cout << " /______|    \n";
+        cout << "     a       \n";
+    }
+
+
+// ALL GLOBAL VARIABLES
+int sideLength, solveForWhat, shape, circSolve, radius, rectsolve, side1, side2, side3, trisolve, sidea, sideb, sidec, trisides;
+int show = 1; // Welcome Home Screen
+
+//-------------------------------------------------[Home Screen]-------------------------------------------------//
+int main() {
+
+    // Application Home Screen  
+
+    if (show == 1) {
+        cout << "Welcome to MathSolver! You can solve a multitude of math problems here!\nHope you enjoy!\n\n" << endl;
+    }
+    show += 1;
+    bool show = false;
+    cout << "[] MATHSOLVER []\n- - - - - - - - - - -  \n";
+    cout << "What are you trying to solve?\nList of Solvables (0)\nCircle (1) \nSquare (2)\nCube (3)\nRectangle (4)\nTriangle (5)\nMultiple Counter (6)\nSlope of Linear Line (7)\nMultiplication Table (8)\n";
+    cout << "- - - - - - - - - - - \n";
+    cout << "Enter the number of what you want to solve: ";
+    cin >> shape;
+    system("cls");
+
+
+
+
+    //-------------------------------------------Shows List of Solvables----------------------------------------//
+    if (shape == 0) {
+        system("cls");
+        cout << "List of Solvables:\n\n";
+        cout << "Circle\n- Diameter\n- Perimeter\n- Circumference\n\n";
+        cout << "Square\n- Area\n- Perimeter\n\n";
+        cout << "Cube\n- Surface Area\n- Volume\n\n";
+        cout << "Rectangle\n- Area\n- Perimeter\n\n";
+        cout << "Triangle\n- Area\n- Perimeter\n\n";
+        cout << "Multiple Counter\n\n";
+        cout << "Multiplication Table\n\n";
+        cout << "Slope of Line *Experimental*\n\n";
+
+
+
+        {// Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(3100);
+            }//-----------------------------
+        }
+    }
+
+
+    //-------------------------------------------------[CIRCLE]-------------------------------------------------//
+
+
+    else if (shape == 1)
+    {   // Solve Circle  1000
+        cout << "What do you want to solve for?\nDiameter (1)\nArea (2)\nCircumference (3)\n";
+        cin >> circSolve; // Determines what to solve for
+        system("cls");
+
+        if (circSolve == 1) {
+            // Diameter  1100
+            cout << "Enter the radius:";
+            cin >> radius;
+            cout << "The diameter is: " << 2 * radius;
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(1100);
+            }//-----------------------------
+        }
+
+
+        else if (circSolve == 2) {
+            // Area of a Circle  1200
+            cout << "Enter the radius:";
+            cin >> radius;
+            cout << "The area is: " << 3.14159265358979 * radius * radius;
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(1200);
+            }//-----------------------------
+        }
+
+        else if (circSolve == 3) {
+            // Circumference of a Circle  1300
+            cout << "Enter the radius:";
+            cin >> radius;
+            cout << "The circumference is: " << 2 * 3.14159265358979 * radius;
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(1300);
+            }//-----------------------------
+        }
+
+        else {
+            // If user enters wrong number  9999
+            cout << "You entered an invalid number";
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(9999);
+            }//-----------------------------
+        }
+
+
+    }
+
+
+    //-------------------------------------------------[SQUARE]-------------------------------------------------//
+
+
+
+    else if (shape == 2) {
+        // Solving either Area or Perimeter for Square  
+        cout << "What do you want to solve?\nArea (1)\nPerimeter (2)\n";
+        cin >> solveForWhat;
+        system("cls");
+
+        if (solveForWhat == 1) {
+            // Area of Square  2110
+            square();
+            cout << "Enter the length of a: ";
+            cin >> sideLength;
+            cout << "The area of the square is: " << sideLength * sideLength;
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(2110);
+            }//-----------------------------
+        }
+
+        else if (solveForWhat == 2) {
+            // Perimeter of Square  2120
+            square();
+            cout << "Enter the length of a: ";
+            cin >> sideLength;
+            cout << "The perimeter of the square is: " << sideLength * 4;
+
+            // Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(2120);
+            }//-----------------------------
+        }
+
+        else {
+            // If user enters wrong number  9999
+            cout << "You have entered an invalid number.";
+
+            // Repeat Function -------------
+            cout << "\nDo you want to solve a problem? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(9999);
+            }//-----------------------------
+
+        }
+
+    }
+
+
+
+    //-------------------------------------------------[CUBE]-------------------------------------------------//
+
+
+    else if (shape == 3) {
+        // Slove Cube for Area or Volume
+        cout << "What are you trying to solve for?\nSurface Area (1)\nPerimeter (2)\n";
+        cin >> rectsolve;
+        system("cls");
+
+
+        if (rectsolve == 1) {
+            cube();
+            cout << "Enter side a: ";
+            cin >> side1;
+            cout << "\nThe surface area of the cube is: " << (side1 * side1) * 6;
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+
+        if (rectsolve == 2) {
+            //Volume of Cube
+            cube();
+            cout << "Enter side a: ";
+            cin >> side1;
+            cout << "\nThe volume of the cube is: " << side1 * side1 * side1;
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+        
+    }
+
+
+    //-------------------------------------------------[RECTANGLE]------------------------------------------------//
+
+
+
+    else if (shape == 4) {
+        // Solve Area or Perimeter for Rectangle 
+        cout << "What are you trying to solve for?\nArea (1)\nPerimeter (2)\n";
+        cin >> rectsolve;
+        system("cls");
+
+        if (rectsolve == 1) {
+            //Area of Rectangle 3100
+            rectanglea();
+            cout << "Enter the length of a: ";
+            cin >> side1;
+            system("cls");
+
+            rectangleb();
+            cout << "Enter the length of a: " << side1;
+            cout << "\nEnter the length of b: ";
+            cin >> side2;
+            system("cls");
+
+            cout << " -------------- \n";
+            cout << "|              |\n";
+            cout << "|              | " << side1 << "\n";
+            cout << "|              |\n";
+            cout << " -------------- \n";
+            cout << "       " << side2 << "\n\n";
+            cout << "Enter the length of a: " << side1;
+            cout << "\nEnter the length of b: " << side2;
+            cout << "\nThe area of the rectangle is: " << side1 * side2 << "\n\n\n";
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+        else if (rectsolve == 2) {
+            // Perimeter of Rectangle 3200
+            rectanglea();
+            cout << "Enter the length of a: ";
+            cin >> side1;
+            system("cls");
+
+            rectangleb();
+            cout << "Enter the length of a: " << side1;
+            cout << "\nEnter the length of b: ";
+            cin >> side2;
+            system("cls");
+
+            cout << " -------------- \n";
+            cout << "|              |\n";
+            cout << "|              | " << side1 << "\n";
+            cout << "|              |\n";
+            cout << " -------------- \n";
+            cout << "       " << side2 << "\n\n";
+            cout << "Enter the length of a: " << side1;
+            cout << "\nEnter the length of b: " << side2;
+            cout << "\nThe perimeter of the rectangle is: " << 2 * side1 + 2 * side2 << "\n\n\n";
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+    }
+
+
+    //-------------------------------------------------[TRIANGLE]-------------------------------------------------//
+
+
+    else if (shape == 5) {
+        // Solving either Area and Perimeter for Triangle
+        cout << "What do you want to solve for?\nArea (1)\nPerimeter (2)\n";
+        cin >> trisolve;
+        system("cls");
+
+        if (trisolve == 1) {
+            //Area of Triangle  4100
+            triangle();
+            cout << "Enter side a: ";
+            cin >> sidea;
+            cout << "Enter side b: ";
+            cin >> sideb;
+            cout << "The area is " << (sidea * sideb) / 2;
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+        else if (trisolve == 2) {
+            //Perimeter of Triangle  4200
+            triangle();
+            cout << "Enter all the sides\n";
+            cout << "Enter side a: ";
+            cin >> sidea;
+            cout << "Enter side b: ";
+            cin >> sideb;
+            cout << "Enter side c: ";
+            cin >> sidec;
+            cout << "The perimeter is " << (sidea + sideb + sidec);
+
+            {// Repeat Function -------------
+                cout << "\nDo you want to go back? ";
+                string yn;
+                cin >> yn;
+                if (yn == "yes") {
+                    system("cls");
+                    return main();
+                }
+                else {
+                    system("cls");
+                    cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                    exit(3100);
+                }//-----------------------------
+            }
+        }
+
+        
+
+        else {
+            cout << "You entered an invalid number";
+        }
+
+    }
+
+
+    //-------------------------------------------------[MULTIPLE COUNTER]-------------------------------------------------//
+
+
+    else if (shape == 6) {
+        // Multiple Counter
+        int start, stop, increase, layout;
+        cout << "What number do you want to start on? ";
+        cin >> start;
+        cout << "What number would you like to stop at? ";
+        cin >> stop;
+        cout << "How much do you want to increase by? ";
+        cin >> increase;
+        cout << "How would you like the layout?\n  _______________\n | 1 2 3 4 5 6....  (1)\n | 2\n | 3\n | 4  (2)\n | 5\n | 6\n\n";
+        cin >> layout;
+
+        for (int cow = start; cow <= stop; cow += increase) {
+            if (layout == 1)
+                cout << cow << " ";
+            else if (layout == 2)
+                cout << cow << endl;
+        }
+
+        {// Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(3100);
+            }//-----------------------------
+        }
+
+    }
+
+    //-------------------------------------------------[SLOPE OF LINEAR LINE]-------------------------------------------------//
+    else if (shape == 7) {
+        //Linear Line Solver
+        int x, y, xx, yy, s, b;
+        cout << "Lets first solve for the slope of the line *Experimental*\n";
+        cout << "You need to have the coordinates of 2 points\n\n";
+        cout << "(x,y)\n";
+        cout << "Enter x: ";
+        cin >> x;
+        cout << "Enter y: ";
+        cin >> y;
+        cout << "Enter the second x coordinate: ";
+        cin >> xx;
+        cout << "Enter the second y coordinate: ";
+        cin >> yy;
+        cout << "(" << x << "," << y << ") | (" << xx << ", " << yy << ")\n\n";
+
+        s = (yy - y) / (xx - x);
+
+        b = y - (s * x);
+
+
+        if (s != 0) {
+
+            if (b > 0)
+                cout << "The equation of your line is: y=" << s << "x+" << b << "\n\n\n\n\n\n";
+
+            else if (b < 0)
+                cout << "The equation of your line is: y=" << s << "x" << b << "\n\n\n\n\n\n";
+
+            else
+                cout << "The equation of your line is: y=" << s << "x\n\n\n\n\n\n";
+        }
+
+        else if (s == 0)
+            cout << "The equation of your line is: y=" << b << "\n\n\n\n\n\n";
+
+        else {
+            cout << "The equation of your line is: y=" << s << "x+" << b << "\n\n\n\n\n\n";
+        }
+
+
+        {// Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(3100);
+            }//-----------------------------
+        }
+
+    }
+
+
+    //-------------------------------------------------[MULTIPLICATION TABLE]-------------------------------------------------//
+    else if (shape == 8) {
+
+        cout << "How many columns (and rows) do you want (between 3 and 8): ";
+        int column;
+        cin >> column;
+
+        if (column >= 3 && column <= 8) {
+
+            cout << "What is the starting number (between 1 and 10): ";
+            int start;
+            cin >> start;
+
+            int start2 = start;
+            int adder = 0;
+            int adder2 = 0;
+            int adder3 = 0;
+            int start3 = start2 + adder2;
+            int start4 = start;
+            int incre = 0;
+            int start2rep = 0;
+
+            cout << "\n\n\n      "; //6 spaces
+
+            if (start <= 10 && start >= 1) {
+                for (int i = 0; i < column; i++) {  //      4   5   6   7  8
+                    cout << start + adder << "      ";
+                    adder++;
+                }
+
+                for (int j = 0; j < column; j++) {   //      4  5  6  7  8  But Down \|/ 
+                    cout << endl << start2 + adder2 << "     ";
+                    adder2++;
+                    start2rep = start2 + incre;
+                    incre++;
+                    adder3 = 0;
+
+                    for (int k = 1; k <= column; k++) {
+
+                        cout << start2rep * (start3 + adder3) << "     ";
+                        adder3++;
+                    }
+                }
+            }
+
+            else if (start > 10 || start < 0)
+                cout << "\b\b\b\b\b\b\b\bMake sure the starting number is between 1 and 10.\n\n\n";
+        }
+
+        else if (column < 3 || column > 8)
+            cout << "Enter a number between 3 and 8.";
+
+        cout << endl << endl;
+
+
+        {// Repeat Function -------------
+            cout << "\nDo you want to go back? ";
+            string yn;
+            cin >> yn;
+            if (yn == "yes") {
+                system("cls");
+                return main();
+            }
+            else {
+                system("cls");
+                cout << "Press any key to exit\n\n\n\n\n\n\n\n";
+                exit(3100);
+            }//-----------------------------
+        }
+
+    }
+
+}
+//-------------------------------------------------[END]-------------------------------------------------//
